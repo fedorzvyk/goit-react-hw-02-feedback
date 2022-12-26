@@ -1,28 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List, ListItem } from './Statistics.styled';
+import {
+  FaSmile,
+  FaFrown,
+  FaMeh,
+  FaCalculator,
+  FaChartBar,
+} from 'react-icons/fa';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <List>
       <ListItem>
-        <span>Good: </span>
+        <FaSmile fill="green" />
+        <span>Good:</span>
         <span>{good}</span>
       </ListItem>
       <ListItem>
-        <span>Neutral: </span>
+        <FaMeh fill="orange" />
+        <span>Neutral:</span>
         <span>{neutral}</span>
       </ListItem>
       <ListItem>
-        <span>Bad: </span>
+        <FaFrown fill="red" />
+        <span>Bad:</span>
         <span>{bad}</span>
       </ListItem>
       <ListItem>
-        <span>Total: </span>
+        <FaCalculator />
+        <span>Total:</span>
         <span>{total}</span>
       </ListItem>
       <ListItem>
-        <span>Positive feedback: </span>
+        <FaChartBar />
+        <span>Positive feedback:</span>
         <span>{positivePercentage}%</span>
       </ListItem>
     </List>
