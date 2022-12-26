@@ -1,16 +1,18 @@
 import React from 'react';
+// import styled from 'styled-components';
+import { Button } from 'commonStyles/coommonStyles.styled';
+import { Box } from 'commonStyles/Box';
 import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  //   console.log(options);
   return (
-    <div>
+    <Box display="flex" alignItems="center" gridGap={4} my={4} mx="auto">
       {options.map(option => (
-        <button key={option} onClick={() => onLeaveFeedback(option)}>
+        <Button key={option} onClick={() => onLeaveFeedback(option)}>
           {option}
-        </button>
+        </Button>
       ))}
-    </div>
+    </Box>
   );
 };
 
