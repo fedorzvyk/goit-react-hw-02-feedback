@@ -13,7 +13,6 @@ export const Button = styled.button`
   justify-content: center;
   transition: transform 250ms linear, border-color 250ms linear,
     color 250ms linear;
-  :focus,
   :hover,
   :focus-visible {
     transform: scale(1.1);
